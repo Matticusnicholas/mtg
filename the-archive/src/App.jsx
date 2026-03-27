@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { HashRouter, Routes, Route } from 'react-router-dom'
 import Scanner from './pages/Scanner'
 import Archive from './pages/Archive'
 import Tabletop from './pages/Tabletop'
@@ -8,7 +8,7 @@ import Dashboard from './pages/Dashboard'
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<Scanner />} />
         <Route path="/archive" element={<Archive />} />
@@ -17,6 +17,6 @@ export default function App() {
         <Route path="/setup" element={<ConnectionSetup />} />
         <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
